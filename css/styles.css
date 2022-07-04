@@ -35,6 +35,10 @@ a:hover {
   left: 1px;
 }
 
+.hover-color {
+  color: #ff6600 !important;
+}
+
 header {
   width: 100%;
   padding: 20px;
