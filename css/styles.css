@@ -43,21 +43,21 @@ header {
   width: 100%;
   padding: 20px;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
+  /* background: linear-gradient( 
     0deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(87, 87, 87, 1) 20%,
     rgba(0, 0, 0, 1) 100%
-  );
+  ); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 header h1 {
   text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 1);
+  font-size: 24px;
+  color: white;
 
-  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+  /* text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2); */
 }
 
 footer {
@@ -69,12 +69,13 @@ footer {
   width: 100%;
   padding: 20px;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
+  /* background: linear-gradient( 
     0deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(87, 87, 87, 1) 80%,
-    rgba(0, 0, 0, 1) 100%
-  );
+    rgba(0, 0, 0, 1) 100% 
+  ); */
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .flex {
@@ -149,6 +150,13 @@ nav ion-icon {
   background-color: whitesmoke;
   border-radius: 20px 20px 0 0;
   padding: 20px;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-tags li {
+  font-size: 10px;
 }
 
 .card-bottom {
