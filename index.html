@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    
   </head>
   <body class="bg-image-big">
     <header>
@@ -16,15 +17,20 @@
         <div class="card-top">
           <div class="bookmark"> 
             <a href="">
-            <ion-icon class="active-state" name="bookmark"></ion-icon>
-          <ion-icon class="hover-state hover-color" name="bookmark"></ion-icon>
+            <ion-icon class="active-state" name="bookmark-outline"></ion-icon>
+          <!-- <ion-icon class="hover-state hover-color" name="bookmark"></ion-icon> -->
         </a>
           </div>
         <h2>Question</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
         <div class="card-bottom">
-        <button>Show Answer</button>
+        <button type="button" class="button" data-js="showAnswerButton">Show Answer</button>
+        <div class="die-antwort" data-js="antwortParagaph">
+          <h3>Die Antwort</h3>
+          <p>Auf die Frage.</p>
+        </div>
+        
         <ul class="card-tags">
           <li>#Tags</li>
           <li>#Tags</li>
@@ -37,31 +43,32 @@
       <nav>
         <ul class="flex">
           <li class="">
-            <a href="index.html">
+            <a href="../index.html">
               <ion-icon class="active-state" name="home-outline"></ion-icon>
               <ion-icon class="hover-state" name="home"></ion-icon>
             </a>
           </li>
           <li class="spacerline"></li>
           <li class="">
-            <a href="bookmarks.html">
+            <a href="/components/bookmarks.html">
               <ion-icon
                 class="active-state"
                 name="bookmarks-outline"
               ></ion-icon>
+              
               <ion-icon class="hover-state" name="bookmarks"></ion-icon>
             </a>
           </li>
           <li class="spacerline"></li>
           <li class="">
-            <a href="create.html">
+            <a href="/components/create.html">
               <ion-icon class="active-state" name="create-outline"></ion-icon>
               <ion-icon class="hover-state" name="create"></ion-icon>
             </a>
           </li>
           <li class="spacerline"></li>
           <li>
-            <a href="profile.html">
+            <a href="/components/profile.html">
               <ion-icon class="active-state" name="settings-outline"></ion-icon>
               <ion-icon class="hover-state" name="settings"></ion-icon>
             </a>
@@ -77,5 +84,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="/index.js" type="module"></script>
   </body>
 </html>

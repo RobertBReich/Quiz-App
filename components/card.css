@@ -1,0 +1,81 @@
+/* ------------ Card ------------- */
+.card {
+  position: relative;
+  border-radius: 20px;
+  background-color: white;
+  min-height: 200px;
+  box-shadow: 5px 5px 19px 5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 16px;
+}
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card button {
+  padding: 8px 16px;
+  margin: 8px 0;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 16px;
+}
+
+.card li {
+  padding: 8px 16px;
+  margin: 8px 0;
+  background-color: rgb(255, 127, 153);
+  border: none;
+  border-radius: 16px;
+}
+
+.card ul {
+  justify-content: space-between;
+}
+
+.card-top {
+  background-color: whitesmoke;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-tags li {
+  font-size: 10px;
+}
+
+.card-bottom {
+  padding: 20px;
+}
+
+/* --- Bookmark --- */
+.card .bookmark {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+}
+
+.card .bookmark a {
+  font-size: 48px;
+  color: black;
+}
+
+.card .hover-state {
+  display: none;
+}
+
+.card a:hover .hover-state {
+  display: block;
+  color: rgb(0, 0, 0);
+}
+.card a:hover .active-state {
+  display: none;
+}
+.die-antwort {
+  display: none;
+}
+
+.is-visible {
+  display: inherit;
+}
