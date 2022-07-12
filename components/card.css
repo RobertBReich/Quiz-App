@@ -27,6 +27,7 @@
 .card li {
   padding: 8px 16px;
   margin: 8px 0;
+  margin-right: 8px;
   color: white;
   background-color: lightgrey;
   border: none;
@@ -34,7 +35,7 @@
 }
 
 .card ul {
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .card-top {

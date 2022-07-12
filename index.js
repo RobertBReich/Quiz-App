@@ -27,25 +27,25 @@ const arrCardData = [
     question: "Welches Land hat die meisten Inseln in der Welt?",
     answer: "Schweden, über 220.000",
     isBookmarked: true,
-    tags: ["SiFy", "Drama", "Film & Serien", "Schmalz"],
+    tags: ["Geographie", "Schweden", "nicht Norwegen"],
   },
   {
     question: "Wer hat das World Wide Web erfunden, und wann?",
     answer: "Tim Berners-Lee, 1990",
     isBookmarked: false,
-    tags: ["SiFy", "Film & Serien", "Horror"],
+    tags: ["www", "Internet"],
   },
   {
     question: "Nenne den ersten Spielfilm von Pixar?",
     answer: "Toy Story, 1995",
     isBookmarked: true,
-    tags: ["SiFy", "Film & Serien", "Bücher", "Fantasy"],
+    tags: ["Animated", "Film & Serien", "Fantasy"],
   },
   {
     question: "Wo ist der tiefste natürliche Ort auf dem Planeten Erde?",
     answer: "Der Marianengraben, 11.034m",
     isBookmarked: false,
-    tags: ["Drama"],
+    tags: ["Geographie"],
   },
   {
     question: "Lorem ipsum dolor sit amet.",
@@ -95,22 +95,21 @@ showAnswerButtons.forEach((ele, index) => {
     }
   });
 });
-
+/* Bookmarks */
 const bookmarks = document.querySelectorAll('[data-js="bookmark"]');
 
 arrCardData.forEach((element, iterator) => {
   bookmarks[iterator].addEventListener("click", () => {
+    console.log(arrCardData);
     if (element.isBookmarked) {
-      console.log("add");
       bookmarks[iterator].classList.remove("is-bookmarked");
       element.isBookmarked = false;
     } else {
-      console.log("remove");
       bookmarks[iterator].classList.add("is-bookmarked");
       element.isBookmarked = true;
     }
   });
-  console.log("BM: " + element);
+
   if (element.isBookmarked) {
     bookmarks[iterator].classList.add("is-bookmarked");
   }
