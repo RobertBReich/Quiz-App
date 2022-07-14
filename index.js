@@ -58,7 +58,6 @@ function createCards(data) {
     xmlTagsAnchor.append(xmlLi);
   });
 
-  /* Show / Hide Answer */
   const showAnswerButtons = document.querySelectorAll(
     '[data-js="showAnswerButton"]'
   );
