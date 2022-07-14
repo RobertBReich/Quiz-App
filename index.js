@@ -36,9 +36,11 @@ fetch(apiUrl)
 /* create .cards */
 function createCards(data) {
   let arrCardData = data;
-
   const pointerMain = document.querySelector('[data-js="home-main"]');
+
+  /* clear "old" cards */
   pointerMain.innerHTML = "";
+
   arrCardData.forEach((element) => {
     let xmlDiv = document.createElement("div");
     xmlDiv.innerHTML = htmlTemplate;
@@ -49,13 +51,10 @@ function createCards(data) {
     xmlDiv.querySelector('[data-js="answer"]').innerText = decodeHtml(
       element.correct_answer
     );
-
     // Tags
     let xmlTagsAnchor = xmlDiv.querySelector('[data-js="tags"]');
-    console.log(element.category);
-
     let xmlLi = document.createElement("li");
-    xmlLi.innerText = element.category;
+    xmlLi.innerText = decodeHtml(element.category);
     xmlTagsAnchor.append(xmlLi);
   });
 
