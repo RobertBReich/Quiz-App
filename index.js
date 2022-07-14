@@ -1,4 +1,4 @@
-import Card from "./components/card.js";
+//import Card from './components/card.js';
 console.clear();
 const htmlTemplate = `<article class="card">
 <div class="card-top">
@@ -22,16 +22,16 @@ const htmlTemplate = `<article class="card">
 </div>
 </article>`;
 function decodeHtml(html) {
-  var txt = document.createElement("textarea");
+  var txt = document.createElement('textarea');
   txt.innerHTML = html;
   return txt.value;
 }
 
-const apiUrl = "https://opentdb.com/api.php?amount=10";
+const apiUrl = 'https://opentdb.com/api.php?amount=10';
 
 fetch(apiUrl)
-  .then((response) => response.json())
-  .then((data) => createCards(data.results));
+  .then(response => response.json())
+  .then(data => createCards(data.results));
 
 /* create .cards */
 function createCards(data) {
@@ -39,10 +39,10 @@ function createCards(data) {
   const pointerMain = document.querySelector('[data-js="home-main"]');
 
   /* clear "old" cards */
-  pointerMain.innerHTML = "";
+  pointerMain.innerHTML = '';
 
-  arrCardData.forEach((element) => {
-    let xmlDiv = document.createElement("div");
+  arrCardData.forEach(element => {
+    let xmlDiv = document.createElement('div');
     xmlDiv.innerHTML = htmlTemplate;
     pointerMain.append(xmlDiv);
     xmlDiv.querySelector('[data-js="question"]').innerText = decodeHtml(
@@ -53,7 +53,7 @@ function createCards(data) {
     );
     // Tags
     let xmlTagsAnchor = xmlDiv.querySelector('[data-js="tags"]');
-    let xmlLi = document.createElement("li");
+    let xmlLi = document.createElement('li');
     xmlLi.innerText = decodeHtml(element.category);
     xmlTagsAnchor.append(xmlLi);
   });
@@ -66,15 +66,15 @@ function createCards(data) {
   );
 
   showAnswerButtons.forEach((ele, index) => {
-    const textAnswerField = ele.querySelector('[data-js="antwortParagaph"]');
+    //const textAnswerField = ele.querySelector('[data-js="antwortParagaph"]');
 
-    ele.addEventListener("click", () => {
-      textAnswerFields[index].classList.toggle("is-visible");
+    ele.addEventListener('click', () => {
+      textAnswerFields[index].classList.toggle('is-visible');
 
-      if (ele.innerText == "Show Answer") {
-        ele.innerText = "Hide Answer";
+      if (ele.innerText == 'Show Answer') {
+        ele.innerText = 'Hide Answer';
       } else {
-        ele.innerText = "Show Answer";
+        ele.innerText = 'Show Answer';
       }
     });
   });
@@ -82,19 +82,19 @@ function createCards(data) {
   const bookmarks = document.querySelectorAll('[data-js="bookmark"]');
 
   arrCardData.forEach((element, iterator) => {
-    bookmarks[iterator].addEventListener("click", () => {
+    bookmarks[iterator].addEventListener('click', () => {
       console.log(arrCardData);
       if (element.isBookmarked) {
-        bookmarks[iterator].classList.remove("is-bookmarked");
+        bookmarks[iterator].classList.remove('is-bookmarked');
         element.isBookmarked = false;
       } else {
-        bookmarks[iterator].classList.add("is-bookmarked");
+        bookmarks[iterator].classList.add('is-bookmarked');
         element.isBookmarked = true;
       }
     });
 
     if (element.isBookmarked) {
-      bookmarks[iterator].classList.add("is-bookmarked");
+      bookmarks[iterator].classList.add('is-bookmarked');
     }
   });
 }
