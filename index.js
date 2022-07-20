@@ -22,6 +22,12 @@ const htmlTemplate = `<article class="card">
 </div>
 </article>`;
 
+function decodeHtml(html) {
+  var txt = document.createElement('textarea');
+  txt.innerHTML = html;
+  return txt.value;
+}
+
 const apiUrl = 'https://opentdb.com/api.php?amount=10';
 
 fetch(apiUrl)
